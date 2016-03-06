@@ -1,9 +1,10 @@
 import boto, boto.ec2, time, os
 from boto.vpc import VPCConnection
 
+# Pull AWS key info from environment
 access_key    = os.environ['AWS_ACCESS_KEY']
 secret_key    = os.environ['AWS_SECRET_ACCESS_KEY']
-keypair_name  = 'AJA-Key'
+keypair_name  = os.environ['AWS_KEYPAIR_NAME']
 
 ###########################################################
 # Script to pass to AWS to run at launch
